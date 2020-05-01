@@ -10,3 +10,32 @@
 .jumbotron {
     margin-top: 10px;
 }
+
+.underline {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding-bottom: 20px;
+}
+
+#survey-header {
+    margin-top: 15px;
+    font-weight: 400;
+}
+
+.survey-question-head {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.question {
+    font-size: 18px;
+}
+
+#submit {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.bottom-menu {
+    margin-bottom: 50px;
+}
