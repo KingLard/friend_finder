@@ -11,6 +11,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
   <!-- Stylesheet Link Here -->
+  <script
+  src="https://code.jquery.com/jquery-3.5.0.min.js"
+  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+  crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,11 +27,11 @@
     <form class="underline">
         <div class="form-group">
           <label for="exampleInputEmail1">Name (required)</label>
-          <input type="text" class="form-control" id="user-name">
+          <input type="text" class="form-control" id="user-name" required>
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Link to Photo Image (required)</label>
-          <input type="text" class="form-control" id="image-src">
+          <input type="text" class="form-control" id="image-src" required>
         </div>
       </form>
 
@@ -181,7 +185,40 @@
 
 
 
+<script type="text/javascript">
 
+$("#submit").on("click", function(event) {
+    event.preventDefault();
+
+    var user = {
+        name: $("#user-name").val(),
+        image: $("#image-src").val(),
+        scores:[
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val()
+        ]
+ };
+
+ console.log(user);
+
+ 
+
+
+
+});
+
+
+
+
+</script>
 
 
 
@@ -208,11 +245,10 @@
       
 
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery.js"></script>
+ 
 
   <!-- JS Script Tag -->
-  <script src="assets/app.js"></script>
+  <script src="../../server.js"></script>
 
 
 </body>
